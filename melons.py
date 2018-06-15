@@ -21,7 +21,7 @@ class AbstractMelonOrder:
         # self.base_price = 5
         # base_price is a class attribute, so its the same for every object in the class
         if self.species == "Christmas":
-            self.base_price = self.base_price * 1.5
+            self.base_price *= 1.5
         total = (1 + self.tax) * self.qty * self.base_price
         if self.qty < 10 and self.order_type == "international":
             total += 3
